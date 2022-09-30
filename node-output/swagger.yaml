@@ -1,0 +1,2763 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0.0",
+    "title" : "trainychat",
+    "contact" : {
+      "email" : "trainychat-no-reply@bubbleapps.io"
+    }
+  },
+  "host" : "trainychat.bubbleapps.io",
+  "basePath" : "/version-test/api/1.1",
+  "tags" : [ {
+    "name" : "Workflow",
+    "description" : "Use this to trigger a workflow"
+  }, {
+    "name" : "Data",
+    "description" : "Use this to fetch, modify and delete data"
+  } ],
+  "schemes" : [ "https" ],
+  "consumes" : [ "application/json" ],
+  "security" : [ {
+    "api_token" : [ ]
+  } ],
+  "paths" : {
+    "/wf/signup" : {
+      "post" : {
+        "tags" : [ "Workflow" ],
+        "description" : "Triggers the workflow signup",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "signup request body",
+          "description" : "Body of the POST request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/signupBody"
+          }
+        } ],
+        "security" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Workflow response",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200"
+            }
+          },
+          "400" : {
+            "description" : "Workflow failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/wf/login" : {
+      "post" : {
+        "tags" : [ "Workflow" ],
+        "description" : "Triggers the workflow login",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "login request body",
+          "description" : "Body of the POST request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/loginBody"
+          }
+        } ],
+        "security" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Workflow response",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200"
+            }
+          },
+          "400" : {
+            "description" : "Workflow failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/wf/create_scoresheet" : {
+      "post" : {
+        "tags" : [ "Workflow" ],
+        "description" : "Triggers the workflow create_scoresheet",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "create_scoresheet request body",
+          "description" : "Body of the POST request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/create_scoresheetBody"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Workflow response",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_1"
+            }
+          },
+          "400" : {
+            "description" : "Workflow failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/wf/get_lesson" : {
+      "post" : {
+        "tags" : [ "Workflow" ],
+        "description" : "Triggers the workflow get_lesson",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "get_lesson request body",
+          "description" : "Body of the POST request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/get_lessonBody"
+          }
+        } ],
+        "security" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Workflow response",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_1"
+            }
+          },
+          "400" : {
+            "description" : "Workflow failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/wf/test-sergey" : {
+      "post" : {
+        "tags" : [ "Workflow" ],
+        "description" : "Triggers the workflow test-sergey",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "test-sergey request body",
+          "description" : "Body of the POST request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/test-sergeyBody"
+          }
+        } ],
+        "security" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Workflow response",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_2"
+            }
+          },
+          "400" : {
+            "description" : "Workflow failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/obj/lessons/{UniqueID}" : {
+      "get" : {
+        "tags" : [ "Data" ],
+        "description" : "Retrieve a thing of type lessons by unique ID",
+        "parameters" : [ {
+          "name" : "UniqueID",
+          "in" : "path",
+          "description" : "Unique ID of the lessons to retrieve",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Retrieved lessons",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_3"
+            }
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "Data" ],
+        "description" : "Replaces a thing of type lessons by unique ID",
+        "parameters" : [ {
+          "name" : "UniqueID",
+          "in" : "path",
+          "description" : "Unique ID of the lessons to replace",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "lessons request body",
+          "description" : "Body of the PUT request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/lessonsBody"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "Replaced lessons"
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "Data" ],
+        "description" : "Deletes a thing of type lessons by unique ID",
+        "parameters" : [ {
+          "name" : "UniqueID",
+          "in" : "path",
+          "description" : "Unique ID of the lessons to delete",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "Replaced lessons"
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      },
+      "patch" : {
+        "tags" : [ "Data" ],
+        "description" : "Modifies a thing of type lessons by unique ID",
+        "parameters" : [ {
+          "name" : "UniqueID",
+          "in" : "path",
+          "description" : "Unique ID of the lessons to modify",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "lessons request body",
+          "description" : "Body of the PATCH request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/lessonsBody"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "Modified lessons"
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/obj/lessons" : {
+      "get" : {
+        "tags" : [ "Data" ],
+        "description" : "Retrieve a list of things of type lessons with some optional search constraints. Retreives 100 items at most at once.",
+        "parameters" : [ {
+          "name" : "limit",
+          "in" : "query",
+          "description" : "Number of items to fetch (maximum is 100)",
+          "required" : false,
+          "type" : "integer",
+          "default" : 50,
+          "format" : "int32"
+        }, {
+          "name" : "cursor",
+          "in" : "query",
+          "description" : "Position to start from in the list",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "format" : "int32"
+        }, {
+          "name" : "sort_field",
+          "in" : "query",
+          "description" : "Field to sort the list on",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "descending",
+          "in" : "query",
+          "description" : "Sorting type: descending or ascending",
+          "required" : false,
+          "type" : "boolean"
+        }, {
+          "name" : "constraints",
+          "in" : "query",
+          "description" : "Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Retrieved list of lessonss",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_4"
+            }
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "Data" ],
+        "description" : "Create a new thing of type lessons",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "lessons request body",
+          "description" : "Body of the POST request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/lessonsBody"
+          }
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Created one thing of type lessons",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_201"
+            }
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/obj/scoresheets/{UniqueID}" : {
+      "get" : {
+        "tags" : [ "Data" ],
+        "description" : "Retrieve a thing of type scoresheets by unique ID",
+        "parameters" : [ {
+          "name" : "UniqueID",
+          "in" : "path",
+          "description" : "Unique ID of the scoresheets to retrieve",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Retrieved scoresheets",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_5"
+            }
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "Data" ],
+        "description" : "Replaces a thing of type scoresheets by unique ID",
+        "parameters" : [ {
+          "name" : "UniqueID",
+          "in" : "path",
+          "description" : "Unique ID of the scoresheets to replace",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "scoresheets request body",
+          "description" : "Body of the PUT request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/scoresheetsBody"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "Replaced scoresheets"
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "Data" ],
+        "description" : "Deletes a thing of type scoresheets by unique ID",
+        "parameters" : [ {
+          "name" : "UniqueID",
+          "in" : "path",
+          "description" : "Unique ID of the scoresheets to delete",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "Replaced scoresheets"
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      },
+      "patch" : {
+        "tags" : [ "Data" ],
+        "description" : "Modifies a thing of type scoresheets by unique ID",
+        "parameters" : [ {
+          "name" : "UniqueID",
+          "in" : "path",
+          "description" : "Unique ID of the scoresheets to modify",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "scoresheets request body",
+          "description" : "Body of the PATCH request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/scoresheetsBody"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "Modified scoresheets"
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/obj/scoresheets" : {
+      "get" : {
+        "tags" : [ "Data" ],
+        "description" : "Retrieve a list of things of type scoresheets with some optional search constraints. Retreives 100 items at most at once.",
+        "parameters" : [ {
+          "name" : "limit",
+          "in" : "query",
+          "description" : "Number of items to fetch (maximum is 100)",
+          "required" : false,
+          "type" : "integer",
+          "default" : 50,
+          "format" : "int32"
+        }, {
+          "name" : "cursor",
+          "in" : "query",
+          "description" : "Position to start from in the list",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "format" : "int32"
+        }, {
+          "name" : "sort_field",
+          "in" : "query",
+          "description" : "Field to sort the list on",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "descending",
+          "in" : "query",
+          "description" : "Sorting type: descending or ascending",
+          "required" : false,
+          "type" : "boolean"
+        }, {
+          "name" : "constraints",
+          "in" : "query",
+          "description" : "Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Retrieved list of scoresheetss",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_6"
+            }
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "Data" ],
+        "description" : "Create a new thing of type scoresheets",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "scoresheets request body",
+          "description" : "Body of the POST request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/scoresheetsBody"
+          }
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Created one thing of type scoresheets",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_201"
+            }
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/obj/team/{UniqueID}" : {
+      "get" : {
+        "tags" : [ "Data" ],
+        "description" : "Retrieve a thing of type team by unique ID",
+        "parameters" : [ {
+          "name" : "UniqueID",
+          "in" : "path",
+          "description" : "Unique ID of the team to retrieve",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Retrieved team",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_7"
+            }
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "Data" ],
+        "description" : "Replaces a thing of type team by unique ID",
+        "parameters" : [ {
+          "name" : "UniqueID",
+          "in" : "path",
+          "description" : "Unique ID of the team to replace",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "team request body",
+          "description" : "Body of the PUT request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/teamBody"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "Replaced team"
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "Data" ],
+        "description" : "Deletes a thing of type team by unique ID",
+        "parameters" : [ {
+          "name" : "UniqueID",
+          "in" : "path",
+          "description" : "Unique ID of the team to delete",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "Replaced team"
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      },
+      "patch" : {
+        "tags" : [ "Data" ],
+        "description" : "Modifies a thing of type team by unique ID",
+        "parameters" : [ {
+          "name" : "UniqueID",
+          "in" : "path",
+          "description" : "Unique ID of the team to modify",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "team request body",
+          "description" : "Body of the PATCH request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/teamBody"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "Modified team"
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/obj/team" : {
+      "get" : {
+        "tags" : [ "Data" ],
+        "description" : "Retrieve a list of things of type team with some optional search constraints. Retreives 100 items at most at once.",
+        "parameters" : [ {
+          "name" : "limit",
+          "in" : "query",
+          "description" : "Number of items to fetch (maximum is 100)",
+          "required" : false,
+          "type" : "integer",
+          "default" : 50,
+          "format" : "int32"
+        }, {
+          "name" : "cursor",
+          "in" : "query",
+          "description" : "Position to start from in the list",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "format" : "int32"
+        }, {
+          "name" : "sort_field",
+          "in" : "query",
+          "description" : "Field to sort the list on",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "descending",
+          "in" : "query",
+          "description" : "Sorting type: descending or ascending",
+          "required" : false,
+          "type" : "boolean"
+        }, {
+          "name" : "constraints",
+          "in" : "query",
+          "description" : "Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Retrieved list of teams",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_8"
+            }
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "Data" ],
+        "description" : "Create a new thing of type team",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "team request body",
+          "description" : "Body of the POST request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/teamBody"
+          }
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Created one thing of type team",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_201"
+            }
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/obj/user/{UniqueID}" : {
+      "get" : {
+        "tags" : [ "Data" ],
+        "description" : "Retrieve a thing of type user by unique ID",
+        "parameters" : [ {
+          "name" : "UniqueID",
+          "in" : "path",
+          "description" : "Unique ID of the user to retrieve",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Retrieved user",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_9"
+            }
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "Data" ],
+        "description" : "Replaces a thing of type user by unique ID",
+        "parameters" : [ {
+          "name" : "UniqueID",
+          "in" : "path",
+          "description" : "Unique ID of the user to replace",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "user request body",
+          "description" : "Body of the PUT request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/userBody"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "Replaced user"
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "Data" ],
+        "description" : "Deletes a thing of type user by unique ID",
+        "parameters" : [ {
+          "name" : "UniqueID",
+          "in" : "path",
+          "description" : "Unique ID of the user to delete",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "Replaced user"
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      },
+      "patch" : {
+        "tags" : [ "Data" ],
+        "description" : "Modifies a thing of type user by unique ID",
+        "parameters" : [ {
+          "name" : "UniqueID",
+          "in" : "path",
+          "description" : "Unique ID of the user to modify",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "user request body",
+          "description" : "Body of the PATCH request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/userBody"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "Modified user"
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/obj/user" : {
+      "get" : {
+        "tags" : [ "Data" ],
+        "description" : "Retrieve a list of things of type user with some optional search constraints. Retreives 100 items at most at once.",
+        "parameters" : [ {
+          "name" : "limit",
+          "in" : "query",
+          "description" : "Number of items to fetch (maximum is 100)",
+          "required" : false,
+          "type" : "integer",
+          "default" : 50,
+          "format" : "int32"
+        }, {
+          "name" : "cursor",
+          "in" : "query",
+          "description" : "Position to start from in the list",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "format" : "int32"
+        }, {
+          "name" : "sort_field",
+          "in" : "query",
+          "description" : "Field to sort the list on",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "descending",
+          "in" : "query",
+          "description" : "Sorting type: descending or ascending",
+          "required" : false,
+          "type" : "boolean"
+        }, {
+          "name" : "constraints",
+          "in" : "query",
+          "description" : "Search constraints, stringified array as described [here](https://manual.bubble.io/core-resources/api/data-api#search-constraints)",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Retrieved list of users",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_10"
+            }
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "Data" ],
+        "description" : "Create a new thing of type user",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "user request body",
+          "description" : "Body of the POST request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/userBody"
+          }
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Created one thing of type user",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_201"
+            }
+          },
+          "400" : {
+            "description" : "Database retrieval failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400_1"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions" : {
+    "api_token" : {
+      "type" : "apiKey",
+      "name" : "api_token",
+      "in" : "query"
+    }
+  },
+  "definitions" : {
+    "lessons" : {
+      "type" : "object",
+      "properties" : {
+        "K1" : {
+          "type" : "string",
+          "description" : "'K1' field of the current Lessons"
+        },
+        "K2" : {
+          "type" : "string",
+          "description" : "'K2' field of the current Lessons"
+        },
+        "K3" : {
+          "type" : "string",
+          "description" : "'K3' field of the current Lessons"
+        },
+        "Learning Material" : {
+          "type" : "string",
+          "description" : "'Learning Material' field of the current Lessons"
+        },
+        "Q1" : {
+          "type" : "string",
+          "description" : "'Q1' field of the current Lessons"
+        },
+        "Q2" : {
+          "type" : "string",
+          "description" : "'Q2' field of the current Lessons"
+        },
+        "Q3" : {
+          "type" : "string",
+          "description" : "'Q3' field of the current Lessons"
+        },
+        "Rank" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "'Rank' field of the current Lessons"
+        },
+        "Status" : {
+          "type" : "boolean",
+          "description" : "'Status' field of the current Lessons"
+        },
+        "Team" : {
+          "type" : "string",
+          "description" : "'Team' field of the current Lessons ('team' represented by a unique ID)"
+        },
+        "Title" : {
+          "type" : "string",
+          "description" : "'Title' field of the current Lessons"
+        },
+        "Created Date" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "'Created Date' field of the current Lessons"
+        },
+        "Modified Date" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "'Modified Date' field of the current Lessons"
+        },
+        "Created By" : {
+          "type" : "string",
+          "description" : "'Created By' field of the current Lessons ('user' represented by a unique ID)"
+        },
+        "_id" : {
+          "type" : "string",
+          "description" : "'unique ID' field of the current Lessons"
+        },
+        "Slug" : {
+          "type" : "string",
+          "description" : "'Slug' field of the current Lessons"
+        }
+      }
+    },
+    "scoresheets" : {
+      "type" : "object",
+      "properties" : {
+        "FailedTestCount" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "'FailedTestCount' field of the current Scoresheets"
+        },
+        "FinishedTimestamp" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "'FinishedTimestamp' field of the current Scoresheets"
+        },
+        "Iteration" : {
+          "type" : "array",
+          "description" : "'Iteration' field of the current Scoresheets",
+          "items" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        },
+        "Lesson" : {
+          "type" : "string",
+          "description" : "'Lesson' field of the current Scoresheets ('lessons' represented by a unique ID)"
+        },
+        "StartedTimestamp" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "'StartedTimestamp' field of the current Scoresheets"
+        },
+        "User" : {
+          "type" : "string",
+          "description" : "'User' field of the current Scoresheets ('user' represented by a unique ID)"
+        },
+        "Created Date" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "'Created Date' field of the current Scoresheets"
+        },
+        "Modified Date" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "'Modified Date' field of the current Scoresheets"
+        },
+        "Created By" : {
+          "type" : "string",
+          "description" : "'Created By' field of the current Scoresheets ('user' represented by a unique ID)"
+        },
+        "_id" : {
+          "type" : "string",
+          "description" : "'unique ID' field of the current Scoresheets"
+        },
+        "Slug" : {
+          "type" : "string",
+          "description" : "'Slug' field of the current Scoresheets"
+        }
+      }
+    },
+    "team" : {
+      "type" : "object",
+      "properties" : {
+        "Team CompletionProgress" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "'Team CompletionProgress' field of the current Team"
+        },
+        "Team Logo" : {
+          "type" : "string",
+          "description" : "'Team Logo' field of the current Team"
+        },
+        "Team Name" : {
+          "type" : "string",
+          "description" : "'Team Name' field of the current Team"
+        },
+        "Created Date" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "'Created Date' field of the current Team"
+        },
+        "Modified Date" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "'Modified Date' field of the current Team"
+        },
+        "Created By" : {
+          "type" : "string",
+          "description" : "'Created By' field of the current Team ('user' represented by a unique ID)"
+        },
+        "_id" : {
+          "type" : "string",
+          "description" : "'unique ID' field of the current Team"
+        },
+        "Slug" : {
+          "type" : "string",
+          "description" : "'Slug' field of the current Team"
+        }
+      }
+    },
+    "user" : {
+      "type" : "object",
+      "properties" : {
+        "Active" : {
+          "type" : "boolean",
+          "description" : "'Active' field of the current User"
+        },
+        "Admin" : {
+          "type" : "boolean",
+          "description" : "'Admin' field of the current User"
+        },
+        "Last Name" : {
+          "type" : "string",
+          "description" : "'Last Name' field of the current User"
+        },
+        "Completion Progress" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "'Completion Progress' field of the current User"
+        },
+        "image" : {
+          "type" : "string",
+          "description" : "'image' field of the current User"
+        },
+        "Phone No." : {
+          "type" : "string",
+          "description" : "'Phone No.' field of the current User"
+        },
+        "First Name" : {
+          "type" : "string",
+          "description" : "'First Name' field of the current User"
+        },
+        "QuizSuccessRate" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "'QuizSuccessRate' field of the current User"
+        },
+        "Team" : {
+          "type" : "string",
+          "description" : "'Team' field of the current User ('team' represented by a unique ID)"
+        },
+        "Created Date" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "'Created Date' field of the current User"
+        },
+        "Modified Date" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "'Modified Date' field of the current User"
+        },
+        "_id" : {
+          "type" : "string",
+          "description" : "'unique ID' field of the current User"
+        },
+        "Slug" : {
+          "type" : "string",
+          "description" : "'Slug' field of the current User"
+        },
+        "authentication" : {
+          "$ref" : "#/definitions/user_authentication"
+        }
+      }
+    },
+    "signupBody" : {
+      "type" : "object",
+      "required" : [ "email", "password" ],
+      "properties" : {
+        "email" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        }
+      }
+    },
+    "loginBody" : {
+      "type" : "object",
+      "required" : [ "email", "password" ],
+      "properties" : {
+        "email" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        }
+      }
+    },
+    "create_scoresheetBody" : {
+      "type" : "object",
+      "required" : [ "failedTestsCount", "finishedTimestamp", "iteration", "lesson", "startedTimestamp", "user" ],
+      "properties" : {
+        "lesson" : {
+          "type" : "string",
+          "description" : "lessons ('lessons' represented by a unique ID)"
+        },
+        "user" : {
+          "type" : "string",
+          "description" : "user ('user' represented by a unique ID)"
+        },
+        "startedTimestamp" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "failedTestsCount" : {
+          "type" : "number",
+          "format" : "float"
+        },
+        "finishedTimestamp" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "iteration" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }
+      }
+    },
+    "get_lessonBody" : {
+      "type" : "object",
+      "required" : [ "employee_id", "team" ],
+      "properties" : {
+        "team" : {
+          "type" : "string",
+          "description" : "team ('team' represented by a unique ID)"
+        },
+        "employee_id" : {
+          "type" : "string"
+        }
+      }
+    },
+    "test-sergeyBody" : {
+      "type" : "object",
+      "required" : [ "employee_id" ],
+      "properties" : {
+        "employee_id" : {
+          "type" : "string"
+        }
+      }
+    },
+    "lessonsBody" : {
+      "type" : "object",
+      "properties" : {
+        "K1" : {
+          "type" : "string",
+          "description" : "'K1' field of the current Lessons"
+        },
+        "K2" : {
+          "type" : "string",
+          "description" : "'K2' field of the current Lessons"
+        },
+        "K3" : {
+          "type" : "string",
+          "description" : "'K3' field of the current Lessons"
+        },
+        "Learning Material" : {
+          "type" : "string",
+          "description" : "'Learning Material' field of the current Lessons"
+        },
+        "Q1" : {
+          "type" : "string",
+          "description" : "'Q1' field of the current Lessons"
+        },
+        "Q2" : {
+          "type" : "string",
+          "description" : "'Q2' field of the current Lessons"
+        },
+        "Q3" : {
+          "type" : "string",
+          "description" : "'Q3' field of the current Lessons"
+        },
+        "Rank" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "'Rank' field of the current Lessons"
+        },
+        "Status" : {
+          "type" : "boolean",
+          "description" : "'Status' field of the current Lessons"
+        },
+        "Team" : {
+          "type" : "string",
+          "description" : "'Team' field of the current Lessons ('team' represented by a unique ID)"
+        },
+        "Title" : {
+          "type" : "string",
+          "description" : "'Title' field of the current Lessons"
+        }
+      }
+    },
+    "scoresheetsBody" : {
+      "type" : "object",
+      "properties" : {
+        "FailedTestCount" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "'FailedTestCount' field of the current Scoresheets"
+        },
+        "FinishedTimestamp" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "'FinishedTimestamp' field of the current Scoresheets"
+        },
+        "Iteration" : {
+          "type" : "array",
+          "description" : "'Iteration' field of the current Scoresheets",
+          "items" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        },
+        "Lesson" : {
+          "type" : "string",
+          "description" : "'Lesson' field of the current Scoresheets ('lessons' represented by a unique ID)"
+        },
+        "StartedTimestamp" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "'StartedTimestamp' field of the current Scoresheets"
+        },
+        "User" : {
+          "type" : "string",
+          "description" : "'User' field of the current Scoresheets ('user' represented by a unique ID)"
+        }
+      }
+    },
+    "teamBody" : {
+      "type" : "object",
+      "properties" : {
+        "Team CompletionProgress" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "'Team CompletionProgress' field of the current Team"
+        },
+        "Team Logo" : {
+          "type" : "string",
+          "description" : "'Team Logo' field of the current Team"
+        },
+        "Team Name" : {
+          "type" : "string",
+          "description" : "'Team Name' field of the current Team"
+        }
+      }
+    },
+    "userBody" : {
+      "type" : "object",
+      "properties" : {
+        "Active" : {
+          "type" : "boolean",
+          "description" : "'Active' field of the current User"
+        },
+        "Admin" : {
+          "type" : "boolean",
+          "description" : "'Admin' field of the current User"
+        },
+        "Last Name" : {
+          "type" : "string",
+          "description" : "'Last Name' field of the current User"
+        },
+        "Completion Progress" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "'Completion Progress' field of the current User"
+        },
+        "image" : {
+          "type" : "string",
+          "description" : "'image' field of the current User"
+        },
+        "Phone No." : {
+          "type" : "string",
+          "description" : "'Phone No.' field of the current User"
+        },
+        "First Name" : {
+          "type" : "string",
+          "description" : "'First Name' field of the current User"
+        },
+        "QuizSuccessRate" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "'QuizSuccessRate' field of the current User"
+        },
+        "Team" : {
+          "type" : "string",
+          "description" : "'Team' field of the current User ('team' represented by a unique ID)"
+        }
+      }
+    },
+    "inline_response_200_response" : {
+      "type" : "object",
+      "properties" : {
+        "user_id" : {
+          "type" : "string"
+        },
+        "token" : {
+          "type" : "string"
+        },
+        "expires" : {
+          "type" : "number",
+          "format" : "float"
+        }
+      }
+    },
+    "inline_response_200" : {
+      "type" : "object",
+      "properties" : {
+        "status" : {
+          "type" : "string",
+          "description" : "Outcome of the workflow"
+        },
+        "response" : {
+          "$ref" : "#/definitions/inline_response_200_response"
+        }
+      }
+    },
+    "inline_response_400" : {
+      "type" : "object",
+      "properties" : {
+        "status" : {
+          "type" : "string",
+          "description" : "Outcome of the workflow"
+        },
+        "message" : {
+          "type" : "string",
+          "description" : "Error message for the workflow"
+        }
+      }
+    },
+    "inline_response_401" : {
+      "type" : "object",
+      "properties" : {
+        "message" : {
+          "type" : "string",
+          "description" : "Error message for the operation"
+        }
+      }
+    },
+    "inline_response_500" : {
+      "type" : "object",
+      "properties" : {
+        "code" : {
+          "type" : "string",
+          "description" : "Error code"
+        },
+        "message" : {
+          "type" : "string",
+          "description" : "Error message for the operation"
+        }
+      }
+    },
+    "inline_response_200_1" : {
+      "type" : "object",
+      "properties" : {
+        "status" : {
+          "type" : "string",
+          "description" : "Outcome of the workflow"
+        },
+        "response" : {
+          "type" : "object",
+          "properties" : { }
+        }
+      }
+    },
+    "inline_response_200_2_response" : {
+      "type" : "object",
+      "properties" : {
+        "next-lesson" : {
+          "type" : "string",
+          "description" : "lessons ('lessons' represented by a unique ID)"
+        }
+      }
+    },
+    "inline_response_200_2" : {
+      "type" : "object",
+      "properties" : {
+        "status" : {
+          "type" : "string",
+          "description" : "Outcome of the workflow"
+        },
+        "response" : {
+          "$ref" : "#/definitions/inline_response_200_2_response"
+        }
+      }
+    },
+    "inline_response_200_3" : {
+      "type" : "object",
+      "properties" : {
+        "response" : {
+          "$ref" : "#/definitions/lessons"
+        }
+      }
+    },
+    "inline_response_400_1" : {
+      "type" : "object",
+      "properties" : {
+        "status" : {
+          "type" : "string",
+          "description" : "Error code"
+        },
+        "message" : {
+          "type" : "string",
+          "description" : "Error message for the operation"
+        }
+      }
+    },
+    "inline_response_200_4_response" : {
+      "type" : "object",
+      "properties" : {
+        "results" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/lessons"
+          }
+        },
+        "cursor" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "Rank of the first item in the list"
+        },
+        "count" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "Number of items in the current response. It is the minimum between the actual length of the list and the sent limit (or 100 if you did not specify a limit)."
+        },
+        "remaining" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "Number of remaining items after the current response. Useful to fetch more items."
+        }
+      }
+    },
+    "inline_response_200_4" : {
+      "type" : "object",
+      "properties" : {
+        "response" : {
+          "$ref" : "#/definitions/inline_response_200_4_response"
+        }
+      }
+    },
+    "inline_response_201" : {
+      "type" : "object",
+      "properties" : {
+        "status" : {
+          "type" : "string",
+          "description" : "Success status of the operation"
+        },
+        "id" : {
+          "type" : "string",
+          "description" : "Unique id of the newly created object"
+        }
+      }
+    },
+    "inline_response_200_5" : {
+      "type" : "object",
+      "properties" : {
+        "response" : {
+          "$ref" : "#/definitions/scoresheets"
+        }
+      }
+    },
+    "inline_response_200_6_response" : {
+      "type" : "object",
+      "properties" : {
+        "results" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/scoresheets"
+          }
+        },
+        "cursor" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "Rank of the first item in the list"
+        },
+        "count" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "Number of items in the current response. It is the minimum between the actual length of the list and the sent limit (or 100 if you did not specify a limit)."
+        },
+        "remaining" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "Number of remaining items after the current response. Useful to fetch more items."
+        }
+      }
+    },
+    "inline_response_200_6" : {
+      "type" : "object",
+      "properties" : {
+        "response" : {
+          "$ref" : "#/definitions/inline_response_200_6_response"
+        }
+      }
+    },
+    "inline_response_200_7" : {
+      "type" : "object",
+      "properties" : {
+        "response" : {
+          "$ref" : "#/definitions/team"
+        }
+      }
+    },
+    "inline_response_200_8_response" : {
+      "type" : "object",
+      "properties" : {
+        "results" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/team"
+          }
+        },
+        "cursor" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "Rank of the first item in the list"
+        },
+        "count" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "Number of items in the current response. It is the minimum between the actual length of the list and the sent limit (or 100 if you did not specify a limit)."
+        },
+        "remaining" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "Number of remaining items after the current response. Useful to fetch more items."
+        }
+      }
+    },
+    "inline_response_200_8" : {
+      "type" : "object",
+      "properties" : {
+        "response" : {
+          "$ref" : "#/definitions/inline_response_200_8_response"
+        }
+      }
+    },
+    "inline_response_200_9" : {
+      "type" : "object",
+      "properties" : {
+        "response" : {
+          "$ref" : "#/definitions/user"
+        }
+      }
+    },
+    "inline_response_200_10_response" : {
+      "type" : "object",
+      "properties" : {
+        "results" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/user"
+          }
+        },
+        "cursor" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "Rank of the first item in the list"
+        },
+        "count" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "Number of items in the current response. It is the minimum between the actual length of the list and the sent limit (or 100 if you did not specify a limit)."
+        },
+        "remaining" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "Number of remaining items after the current response. Useful to fetch more items."
+        }
+      }
+    },
+    "inline_response_200_10" : {
+      "type" : "object",
+      "properties" : {
+        "response" : {
+          "$ref" : "#/definitions/inline_response_200_10_response"
+        }
+      }
+    },
+    "user_authentication_email" : {
+      "type" : "object",
+      "properties" : {
+        "email" : {
+          "type" : "string",
+          "description" : "Email"
+        },
+        "email_confirmed" : {
+          "type" : "boolean",
+          "description" : "Email confirmed"
+        }
+      }
+    },
+    "user_authentication" : {
+      "type" : "object",
+      "properties" : {
+        "email" : {
+          "$ref" : "#/definitions/user_authentication_email"
+        }
+      }
+    }
+  }
+}
