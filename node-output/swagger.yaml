@@ -167,6 +167,7 @@
             "$ref" : "#/definitions/create_scoresheetBody"
           }
         } ],
+        "security" : [ ],
         "responses" : {
           "200" : {
             "description" : "Workflow response",
@@ -237,7 +238,7 @@
           "200" : {
             "description" : "Workflow response",
             "schema" : {
-              "$ref" : "#/definitions/inline_response_200_1"
+              "$ref" : "#/definitions/inline_response_200_2"
             }
           },
           "400" : {
@@ -285,17 +286,17 @@
         }
       }
     },
-    "/wf/test-sergey" : {
+    "/wf/close-scoresheet" : {
       "post" : {
         "tags" : [ "Workflow" ],
-        "description" : "Triggers the workflow test-sergey",
+        "description" : "Triggers the workflow close-scoresheet",
         "parameters" : [ {
           "in" : "body",
-          "name" : "test-sergey request body",
+          "name" : "close-scoresheet request body",
           "description" : "Body of the POST request",
           "required" : false,
           "schema" : {
-            "$ref" : "#/definitions/test-sergeyBody"
+            "$ref" : "#/definitions/close-scoresheetBody"
           }
         } ],
         "security" : [ ],
@@ -303,7 +304,535 @@
           "200" : {
             "description" : "Workflow response",
             "schema" : {
-              "$ref" : "#/definitions/inline_response_200_2"
+              "$ref" : "#/definitions/inline_response_200_3"
+            }
+          },
+          "400" : {
+            "description" : "Workflow failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/wf/get-employee-progress" : {
+      "post" : {
+        "tags" : [ "Workflow" ],
+        "description" : "Triggers the workflow get-employee-progress",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "get-employee-progress request body",
+          "description" : "Body of the POST request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/get-employee-progressBody"
+          }
+        } ],
+        "security" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Workflow response",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_4"
+            }
+          },
+          "400" : {
+            "description" : "Workflow failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/wf/get-user-scoresheet" : {
+      "post" : {
+        "tags" : [ "Workflow" ],
+        "description" : "Triggers the workflow get-user-scoresheet",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "get-user-scoresheet request body",
+          "description" : "Body of the POST request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/get-user-scoresheetBody"
+          }
+        } ],
+        "security" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Workflow response",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_5"
+            }
+          },
+          "400" : {
+            "description" : "Workflow failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/wf/flow-started" : {
+      "post" : {
+        "tags" : [ "Workflow" ],
+        "description" : "Triggers the workflow flow-started",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "flow-started request body",
+          "description" : "Body of the POST request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/flow-startedBody"
+          }
+        } ],
+        "security" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Workflow response",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_6"
+            }
+          },
+          "400" : {
+            "description" : "Workflow failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/wf/flow-ended" : {
+      "post" : {
+        "tags" : [ "Workflow" ],
+        "description" : "Triggers the workflow flow-ended",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "flow-ended request body",
+          "description" : "Body of the POST request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/flow-endedBody"
+          }
+        } ],
+        "security" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Workflow response",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_3"
+            }
+          },
+          "400" : {
+            "description" : "Workflow failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/wf/set-channel" : {
+      "post" : {
+        "tags" : [ "Workflow" ],
+        "description" : "Triggers the workflow set-channel",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "set-channel request body",
+          "description" : "Body of the POST request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/set-channelBody"
+          }
+        } ],
+        "security" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Workflow response",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_3"
+            }
+          },
+          "400" : {
+            "description" : "Workflow failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/wf/next-lesson" : {
+      "post" : {
+        "tags" : [ "Workflow" ],
+        "description" : "Triggers the workflow next-lesson",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "next-lesson request body",
+          "description" : "Body of the POST request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/next-lessonBody"
+          }
+        } ],
+        "security" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Workflow response",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_7"
+            }
+          },
+          "400" : {
+            "description" : "Workflow failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/wf/send-reminder" : {
+      "post" : {
+        "tags" : [ "Workflow" ],
+        "description" : "Triggers the workflow send-reminder",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "send-reminder request body",
+          "description" : "Body of the POST request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/send-reminderBody"
+          }
+        } ],
+        "security" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Workflow response",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_3"
+            }
+          },
+          "400" : {
+            "description" : "Workflow failure",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_400"
+            }
+          },
+          "401" : {
+            "description" : "Permission denied",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "404" : {
+            "description" : "Not found",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "405" : {
+            "description" : "Wrong method",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "429" : {
+            "description" : "Too many requests",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          },
+          "500" : {
+            "description" : "Internal bug. Please file a bug report at bubble.io/support/report with the request that triggers this bug",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_500"
+            }
+          },
+          "503" : {
+            "description" : "Service Unavailable",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_401"
+            }
+          }
+        }
+      }
+    },
+    "/wf/next-lesson-sergey-test" : {
+      "post" : {
+        "tags" : [ "Workflow" ],
+        "description" : "Triggers the workflow next-lesson-sergey-test",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "next-lesson-sergey-test request body",
+          "description" : "Body of the POST request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/next-lesson-sergey-testBody"
+          }
+        } ],
+        "security" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Workflow response",
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_200_8"
             }
           },
           "400" : {
@@ -366,7 +895,7 @@
           "200" : {
             "description" : "Retrieved lessons",
             "schema" : {
-              "$ref" : "#/definitions/inline_response_200_3"
+              "$ref" : "#/definitions/inline_response_200_9"
             }
           },
           "400" : {
@@ -647,7 +1176,7 @@
           "200" : {
             "description" : "Retrieved list of lessonss",
             "schema" : {
-              "$ref" : "#/definitions/inline_response_200_4"
+              "$ref" : "#/definitions/inline_response_200_10"
             }
           },
           "400" : {
@@ -773,7 +1302,7 @@
           "200" : {
             "description" : "Retrieved scoresheets",
             "schema" : {
-              "$ref" : "#/definitions/inline_response_200_5"
+              "$ref" : "#/definitions/inline_response_200_11"
             }
           },
           "400" : {
@@ -1054,7 +1583,7 @@
           "200" : {
             "description" : "Retrieved list of scoresheetss",
             "schema" : {
-              "$ref" : "#/definitions/inline_response_200_6"
+              "$ref" : "#/definitions/inline_response_200_12"
             }
           },
           "400" : {
@@ -1180,7 +1709,7 @@
           "200" : {
             "description" : "Retrieved team",
             "schema" : {
-              "$ref" : "#/definitions/inline_response_200_7"
+              "$ref" : "#/definitions/inline_response_200_13"
             }
           },
           "400" : {
@@ -1461,7 +1990,7 @@
           "200" : {
             "description" : "Retrieved list of teams",
             "schema" : {
-              "$ref" : "#/definitions/inline_response_200_8"
+              "$ref" : "#/definitions/inline_response_200_14"
             }
           },
           "400" : {
@@ -1587,7 +2116,7 @@
           "200" : {
             "description" : "Retrieved user",
             "schema" : {
-              "$ref" : "#/definitions/inline_response_200_9"
+              "$ref" : "#/definitions/inline_response_200_15"
             }
           },
           "400" : {
@@ -1868,7 +2397,7 @@
           "200" : {
             "description" : "Retrieved list of users",
             "schema" : {
-              "$ref" : "#/definitions/inline_response_200_10"
+              "$ref" : "#/definitions/inline_response_200_16"
             }
           },
           "400" : {
@@ -2003,9 +2532,9 @@
           "type" : "string",
           "description" : "'K3' field of the current Lessons"
         },
-        "Learning Material" : {
+        "LearningMaterial" : {
           "type" : "string",
-          "description" : "'Learning Material' field of the current Lessons"
+          "description" : "'LearningMaterial' field of the current Lessons"
         },
         "Q1" : {
           "type" : "string",
@@ -2063,6 +2592,10 @@
     "scoresheets" : {
       "type" : "object",
       "properties" : {
+        "Completed" : {
+          "type" : "boolean",
+          "description" : "'Completed' field of the current Scoresheets"
+        },
         "FailedTestCount" : {
           "type" : "number",
           "format" : "float",
@@ -2073,17 +2606,14 @@
           "format" : "date-time",
           "description" : "'FinishedTimestamp' field of the current Scoresheets"
         },
-        "Iteration" : {
-          "type" : "array",
-          "description" : "'Iteration' field of the current Scoresheets",
-          "items" : {
-            "type" : "string",
-            "format" : "date-time"
-          }
-        },
         "Lesson" : {
           "type" : "string",
           "description" : "'Lesson' field of the current Scoresheets ('lessons' represented by a unique ID)"
+        },
+        "QuestionsCompletedCount" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "'QuestionsCompletedCount' field of the current Scoresheets"
         },
         "StartedTimestamp" : {
           "type" : "string",
@@ -2121,18 +2651,18 @@
     "team" : {
       "type" : "object",
       "properties" : {
-        "Team CompletionProgress" : {
+        "Team_CompletionProgress" : {
           "type" : "number",
           "format" : "float",
-          "description" : "'Team CompletionProgress' field of the current Team"
+          "description" : "'Team_CompletionProgress' field of the current Team"
         },
-        "Team Logo" : {
+        "Team_Logo" : {
           "type" : "string",
-          "description" : "'Team Logo' field of the current Team"
+          "description" : "'Team_Logo' field of the current Team"
         },
-        "Team Name" : {
+        "Team_Name" : {
           "type" : "string",
-          "description" : "'Team Name' field of the current Team"
+          "description" : "'Team_Name' field of the current Team"
         },
         "Created Date" : {
           "type" : "string",
@@ -2169,31 +2699,50 @@
           "type" : "boolean",
           "description" : "'Admin' field of the current User"
         },
-        "Last Name" : {
+        "LastName" : {
           "type" : "string",
-          "description" : "'Last Name' field of the current User"
+          "description" : "'LastName' field of the current User"
         },
-        "Completion Progress" : {
+        "CompletionProgress" : {
           "type" : "number",
           "format" : "float",
-          "description" : "'Completion Progress' field of the current User"
+          "description" : "'CompletionProgress' field of the current User"
+        },
+        "flowEndedTime" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "'flowEndedTime' field of the current User"
+        },
+        "flowInProgress" : {
+          "type" : "boolean",
+          "description" : "'flowInProgress' field of the current User"
+        },
+        "flowStartedTime" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "'flowStartedTime' field of the current User"
         },
         "image" : {
           "type" : "string",
           "description" : "'image' field of the current User"
         },
-        "Phone No." : {
+        "Phone_No." : {
           "type" : "string",
-          "description" : "'Phone No.' field of the current User"
+          "description" : "'Phone_No.' field of the current User"
         },
-        "First Name" : {
+        "FirstName" : {
           "type" : "string",
-          "description" : "'First Name' field of the current User"
+          "description" : "'FirstName' field of the current User"
         },
         "QuizSuccessRate" : {
           "type" : "number",
           "format" : "float",
           "description" : "'QuizSuccessRate' field of the current User"
+        },
+        "reminderSentTime" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "'reminderSentTime' field of the current User"
         },
         "Team" : {
           "type" : "string",
@@ -2248,51 +2797,116 @@
     },
     "create_scoresheetBody" : {
       "type" : "object",
-      "required" : [ "failedTestsCount", "finishedTimestamp", "iteration", "lesson", "startedTimestamp", "user" ],
+      "required" : [ "bubble_user_id", "lesson_id" ],
       "properties" : {
-        "lesson" : {
+        "lesson_id" : {
           "type" : "string",
           "description" : "lessons ('lessons' represented by a unique ID)"
         },
-        "user" : {
+        "bubble_user_id" : {
           "type" : "string",
           "description" : "user ('user' represented by a unique ID)"
-        },
-        "startedTimestamp" : {
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "failedTestsCount" : {
-          "type" : "number",
-          "format" : "float"
-        },
-        "finishedTimestamp" : {
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "iteration" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string",
-            "format" : "date-time"
-          }
         }
       }
     },
     "get_lessonBody" : {
       "type" : "object",
-      "required" : [ "employee_id", "team" ],
+      "required" : [ "bubble_user_id", "team_id" ],
       "properties" : {
-        "team" : {
+        "bubble_user_id" : {
+          "type" : "string"
+        },
+        "team_id" : {
           "type" : "string",
           "description" : "team ('team' represented by a unique ID)"
-        },
-        "employee_id" : {
-          "type" : "string"
         }
       }
     },
-    "test-sergeyBody" : {
+    "close-scoresheetBody" : {
+      "type" : "object",
+      "required" : [ "scoresheet_id", "wrong" ],
+      "properties" : {
+        "scoresheet_id" : {
+          "type" : "string",
+          "description" : "scoresheets ('scoresheets' represented by a unique ID)"
+        },
+        "wrong" : {
+          "type" : "number",
+          "format" : "float"
+        }
+      }
+    },
+    "get-employee-progressBody" : {
+      "type" : "object",
+      "required" : [ "bubble_user_id" ],
+      "properties" : {
+        "bubble_user_id" : {
+          "type" : "string",
+          "description" : "user ('user' represented by a unique ID)"
+        }
+      }
+    },
+    "get-user-scoresheetBody" : {
+      "type" : "object",
+      "required" : [ "bubble_user_id" ],
+      "properties" : {
+        "bubble_user_id" : {
+          "type" : "string",
+          "description" : "user ('user' represented by a unique ID)"
+        }
+      }
+    },
+    "flow-startedBody" : {
+      "type" : "object",
+      "required" : [ "bubble_user_id" ],
+      "properties" : {
+        "bubble_user_id" : {
+          "type" : "string",
+          "description" : "user ('user' represented by a unique ID)"
+        }
+      }
+    },
+    "flow-endedBody" : {
+      "type" : "object",
+      "required" : [ "bubble_user_id" ],
+      "properties" : {
+        "bubble_user_id" : {
+          "type" : "string",
+          "description" : "user ('user' represented by a unique ID)"
+        }
+      }
+    },
+    "set-channelBody" : {
+      "type" : "object",
+      "required" : [ "bubble_user_id" ],
+      "properties" : {
+        "bubble_user_id" : {
+          "type" : "string",
+          "description" : "user ('user' represented by a unique ID)"
+        }
+      }
+    },
+    "next-lessonBody" : {
+      "type" : "object",
+      "required" : [ "bubble_user_id" ],
+      "properties" : {
+        "bubble_user_id" : {
+          "type" : "string",
+          "description" : "user ('user' represented by a unique ID)"
+        }
+      }
+    },
+    "send-reminderBody" : {
+      "type" : "object",
+      "required" : [ "bubble_user_id" ],
+      "properties" : {
+        "bubble_user_id" : {
+          "type" : "string",
+          "description" : "user ('user' represented by a unique ID)"
+        }
+      }
+    },
+    "next-lesson-sergey-testBody" : {
       "type" : "object",
       "required" : [ "employee_id" ],
       "properties" : {
@@ -2316,9 +2930,9 @@
           "type" : "string",
           "description" : "'K3' field of the current Lessons"
         },
-        "Learning Material" : {
+        "LearningMaterial" : {
           "type" : "string",
-          "description" : "'Learning Material' field of the current Lessons"
+          "description" : "'LearningMaterial' field of the current Lessons"
         },
         "Q1" : {
           "type" : "string",
@@ -2354,6 +2968,10 @@
     "scoresheetsBody" : {
       "type" : "object",
       "properties" : {
+        "Completed" : {
+          "type" : "boolean",
+          "description" : "'Completed' field of the current Scoresheets"
+        },
         "FailedTestCount" : {
           "type" : "number",
           "format" : "float",
@@ -2364,17 +2982,14 @@
           "format" : "date-time",
           "description" : "'FinishedTimestamp' field of the current Scoresheets"
         },
-        "Iteration" : {
-          "type" : "array",
-          "description" : "'Iteration' field of the current Scoresheets",
-          "items" : {
-            "type" : "string",
-            "format" : "date-time"
-          }
-        },
         "Lesson" : {
           "type" : "string",
           "description" : "'Lesson' field of the current Scoresheets ('lessons' represented by a unique ID)"
+        },
+        "QuestionsCompletedCount" : {
+          "type" : "number",
+          "format" : "float",
+          "description" : "'QuestionsCompletedCount' field of the current Scoresheets"
         },
         "StartedTimestamp" : {
           "type" : "string",
@@ -2390,18 +3005,18 @@
     "teamBody" : {
       "type" : "object",
       "properties" : {
-        "Team CompletionProgress" : {
+        "Team_CompletionProgress" : {
           "type" : "number",
           "format" : "float",
-          "description" : "'Team CompletionProgress' field of the current Team"
+          "description" : "'Team_CompletionProgress' field of the current Team"
         },
-        "Team Logo" : {
+        "Team_Logo" : {
           "type" : "string",
-          "description" : "'Team Logo' field of the current Team"
+          "description" : "'Team_Logo' field of the current Team"
         },
-        "Team Name" : {
+        "Team_Name" : {
           "type" : "string",
-          "description" : "'Team Name' field of the current Team"
+          "description" : "'Team_Name' field of the current Team"
         }
       }
     },
@@ -2416,31 +3031,50 @@
           "type" : "boolean",
           "description" : "'Admin' field of the current User"
         },
-        "Last Name" : {
+        "LastName" : {
           "type" : "string",
-          "description" : "'Last Name' field of the current User"
+          "description" : "'LastName' field of the current User"
         },
-        "Completion Progress" : {
+        "CompletionProgress" : {
           "type" : "number",
           "format" : "float",
-          "description" : "'Completion Progress' field of the current User"
+          "description" : "'CompletionProgress' field of the current User"
+        },
+        "flowEndedTime" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "'flowEndedTime' field of the current User"
+        },
+        "flowInProgress" : {
+          "type" : "boolean",
+          "description" : "'flowInProgress' field of the current User"
+        },
+        "flowStartedTime" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "'flowStartedTime' field of the current User"
         },
         "image" : {
           "type" : "string",
           "description" : "'image' field of the current User"
         },
-        "Phone No." : {
+        "Phone_No." : {
           "type" : "string",
-          "description" : "'Phone No.' field of the current User"
+          "description" : "'Phone_No.' field of the current User"
         },
-        "First Name" : {
+        "FirstName" : {
           "type" : "string",
-          "description" : "'First Name' field of the current User"
+          "description" : "'FirstName' field of the current User"
         },
         "QuizSuccessRate" : {
           "type" : "number",
           "format" : "float",
           "description" : "'QuizSuccessRate' field of the current User"
+        },
+        "reminderSentTime" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "'reminderSentTime' field of the current User"
         },
         "Team" : {
           "type" : "string",
@@ -2510,6 +3144,14 @@
         }
       }
     },
+    "inline_response_200_1_response" : {
+      "type" : "object",
+      "properties" : {
+        "scoresheet_id" : {
+          "type" : "string"
+        }
+      }
+    },
     "inline_response_200_1" : {
       "type" : "object",
       "properties" : {
@@ -2518,17 +3160,19 @@
           "description" : "Outcome of the workflow"
         },
         "response" : {
-          "type" : "object",
-          "properties" : { }
+          "$ref" : "#/definitions/inline_response_200_1_response"
         }
       }
     },
     "inline_response_200_2_response" : {
       "type" : "object",
       "properties" : {
-        "next-lesson" : {
-          "type" : "string",
-          "description" : "lessons ('lessons' represented by a unique ID)"
+        "get_lesson" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "description" : "lessons ('lessons' represented by a unique ID)"
+          }
         }
       }
     },
@@ -2545,6 +3189,146 @@
       }
     },
     "inline_response_200_3" : {
+      "type" : "object",
+      "properties" : {
+        "status" : {
+          "type" : "string",
+          "description" : "Outcome of the workflow"
+        },
+        "response" : {
+          "type" : "object",
+          "properties" : { }
+        }
+      }
+    },
+    "inline_response_200_4_response" : {
+      "type" : "object",
+      "properties" : {
+        "employee_lessons" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "description" : "lessons ('lessons' represented by a unique ID)"
+          }
+        },
+        "employee_scoresheet" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "description" : "scoresheets ('scoresheets' represented by a unique ID)"
+          }
+        },
+        "completed_lessons" : {
+          "type" : "number",
+          "format" : "float"
+        },
+        "progress" : {
+          "type" : "number",
+          "format" : "float"
+        }
+      }
+    },
+    "inline_response_200_4" : {
+      "type" : "object",
+      "properties" : {
+        "status" : {
+          "type" : "string",
+          "description" : "Outcome of the workflow"
+        },
+        "response" : {
+          "$ref" : "#/definitions/inline_response_200_4_response"
+        }
+      }
+    },
+    "inline_response_200_5_response" : {
+      "type" : "object",
+      "properties" : {
+        "user_scoresheets" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "description" : "scoresheets ('scoresheets' represented by a unique ID)"
+          }
+        }
+      }
+    },
+    "inline_response_200_5" : {
+      "type" : "object",
+      "properties" : {
+        "status" : {
+          "type" : "string",
+          "description" : "Outcome of the workflow"
+        },
+        "response" : {
+          "$ref" : "#/definitions/inline_response_200_5_response"
+        }
+      }
+    },
+    "inline_response_200_6_response" : {
+      "type" : "object",
+      "properties" : {
+        "continueFlow" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "inline_response_200_6" : {
+      "type" : "object",
+      "properties" : {
+        "status" : {
+          "type" : "string",
+          "description" : "Outcome of the workflow"
+        },
+        "response" : {
+          "$ref" : "#/definitions/inline_response_200_6_response"
+        }
+      }
+    },
+    "inline_response_200_7_response" : {
+      "type" : "object",
+      "properties" : {
+        "next_lesson" : {
+          "type" : "string"
+        },
+        "_id" : {
+          "type" : "string"
+        }
+      }
+    },
+    "inline_response_200_7" : {
+      "type" : "object",
+      "properties" : {
+        "status" : {
+          "type" : "string",
+          "description" : "Outcome of the workflow"
+        },
+        "response" : {
+          "$ref" : "#/definitions/inline_response_200_7_response"
+        }
+      }
+    },
+    "inline_response_200_8_response" : {
+      "type" : "object",
+      "properties" : {
+        "next-lesson" : {
+          "type" : "string",
+          "description" : "lessons ('lessons' represented by a unique ID)"
+        }
+      }
+    },
+    "inline_response_200_8" : {
+      "type" : "object",
+      "properties" : {
+        "status" : {
+          "type" : "string",
+          "description" : "Outcome of the workflow"
+        },
+        "response" : {
+          "$ref" : "#/definitions/inline_response_200_8_response"
+        }
+      }
+    },
+    "inline_response_200_9" : {
       "type" : "object",
       "properties" : {
         "response" : {
@@ -2565,7 +3349,7 @@
         }
       }
     },
-    "inline_response_200_4_response" : {
+    "inline_response_200_10_response" : {
       "type" : "object",
       "properties" : {
         "results" : {
@@ -2591,11 +3375,11 @@
         }
       }
     },
-    "inline_response_200_4" : {
+    "inline_response_200_10" : {
       "type" : "object",
       "properties" : {
         "response" : {
-          "$ref" : "#/definitions/inline_response_200_4_response"
+          "$ref" : "#/definitions/inline_response_200_10_response"
         }
       }
     },
@@ -2612,7 +3396,7 @@
         }
       }
     },
-    "inline_response_200_5" : {
+    "inline_response_200_11" : {
       "type" : "object",
       "properties" : {
         "response" : {
@@ -2620,7 +3404,7 @@
         }
       }
     },
-    "inline_response_200_6_response" : {
+    "inline_response_200_12_response" : {
       "type" : "object",
       "properties" : {
         "results" : {
@@ -2646,15 +3430,15 @@
         }
       }
     },
-    "inline_response_200_6" : {
+    "inline_response_200_12" : {
       "type" : "object",
       "properties" : {
         "response" : {
-          "$ref" : "#/definitions/inline_response_200_6_response"
+          "$ref" : "#/definitions/inline_response_200_12_response"
         }
       }
     },
-    "inline_response_200_7" : {
+    "inline_response_200_13" : {
       "type" : "object",
       "properties" : {
         "response" : {
@@ -2662,7 +3446,7 @@
         }
       }
     },
-    "inline_response_200_8_response" : {
+    "inline_response_200_14_response" : {
       "type" : "object",
       "properties" : {
         "results" : {
@@ -2688,15 +3472,15 @@
         }
       }
     },
-    "inline_response_200_8" : {
+    "inline_response_200_14" : {
       "type" : "object",
       "properties" : {
         "response" : {
-          "$ref" : "#/definitions/inline_response_200_8_response"
+          "$ref" : "#/definitions/inline_response_200_14_response"
         }
       }
     },
-    "inline_response_200_9" : {
+    "inline_response_200_15" : {
       "type" : "object",
       "properties" : {
         "response" : {
@@ -2704,7 +3488,7 @@
         }
       }
     },
-    "inline_response_200_10_response" : {
+    "inline_response_200_16_response" : {
       "type" : "object",
       "properties" : {
         "results" : {
@@ -2730,11 +3514,11 @@
         }
       }
     },
-    "inline_response_200_10" : {
+    "inline_response_200_16" : {
       "type" : "object",
       "properties" : {
         "response" : {
-          "$ref" : "#/definitions/inline_response_200_10_response"
+          "$ref" : "#/definitions/inline_response_200_16_response"
         }
       }
     },
